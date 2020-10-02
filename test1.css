@@ -381,8 +381,17 @@ button.round-decrease {
 	box-sizing: border-box;
 }
 
+
+
+
+h1, h2 {
+	margin: 15px;
+	color: maroon;
+}
+
 .wrapper {
-    margin: 50px;
+	margin: 15px;
+	padding-bottom: 15px;
     border: 2px dotted #eee;
     background: rgba(210, 210, 210, .3);
     font-size: 18px;
@@ -394,15 +403,14 @@ first-cwc {
     background: rgba(250, 250, 210, .6);
 }
 
-olapic-widget {
-    display: block;
-	border: 2px dashed #ddd;
-	background: #fff;
-}
-
 .aaa, .bbb {
     display: inline-block;
-    margin: 30px;
-    padding: 20px 30px;
-    border: 1px solid #ccc;
+    margin: 15px;
+    padding: 10px 15px;
+	border: double #ccc;
+}
+
+.bbb {
+	cursor: pointer;
+	border: 1px solid #ccc;
 }

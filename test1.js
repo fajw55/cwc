@@ -19,8 +19,22 @@ class FirstCwc extends HTMLElement {
         const secondButton = document.createElement("div");
 		secondButton.setAttribute("class", "bbb");
 		secondButton.setAttribute("id", "inner-button");
-		secondButton.textContent = `Increase all counts`;
+		secondButton.textContent = `Increase count.`;
 
+		const style = document.createElement("style");
+		style.textContent = `
+			.aaa, .bbb, .ccc {
+				display: inline-block;
+				margin: 8px;
+				padding: 5px 8px;
+				border: double #aaa;
+			}
+			.aaa {}
+			.bbb { cursor: pointer; border: 1px solid #ccc }
+			.ccc { cursor: pointer; border: groove #eee }
+		`;
+
+		shadow.appendChild(style);
 		shadow.appendChild(counter);
         shadow.appendChild(button);
         shadow.appendChild(secondButton);

@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="test1.css" type="text/css" media="all">
+    <link rel="stylesheet" href="test2.css" type="text/css" media="all">
 </head>
 
 <body>
     <h1>Test page</h1>
     <div class="wrapper">
-        <h2>Custom web component</h2>
         <div class="aaa" id="cart" data-value=0>0</div>
         <div class="bbb" id="outher-1">Increase count.</div>
         <first-cwc count=0></first-cwc>
@@ -19,11 +19,48 @@
         <div class="bbb" id="outher-3">Increase count.</div>
         <div class="bbb" id="outher-4">Increase count.</div>
 
+        <div class="built-in-holder">
+            <h2>Expanding list web component ... customized built-in element</h2>
+            <ul is="expanding-list" class="built-in-element">
+                <li>UK
+                    <ul>
+                        <li>Yorkshire
+                            <ul>
+                                <li>Leeds
+                                    <ul>
+                                        <li>Train station</li>
+                                        <li>Town hall</li>
+                                        <li>Headrow</li>
+                                    </ul>
+                                </li>
+                                <li>Bradford</li>
+                                <li>Hull</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>USA
+                    <ul>
+                        <li>California
+                            <ul>
+                                <li>Los Angeles</li>
+                                <li>San Francisco</li>
+                                <li>Berkeley</li>
+                            </ul>
+                        </li>
+                        <li>Nevada</li>
+                        <li>Oregon</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
         <h2>Olapic widget</h2>
         <div id="ori-olapic-widget-root" data-config='{"apiKey": "0a40a13fd9d531110b4d6515ef0d6c529acdb59e81194132356a1b8903790c18"}'></div>
     </div>
 
     <script src="test1.js"></script>
+    <script src="test2.js"></script>
     <script src="olapic.js"></script>
 </body>
 

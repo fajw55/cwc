@@ -8,6 +8,9 @@ class FirstCwc extends HTMLElement {
 
 		const shadow = this.attachShadow({ mode: "open" });
 
+		const title = document.createElement("h2");
+		title.textContent = `Custom web component`;
+
 		const counter = document.createElement("div");
 		counter.setAttribute("class", "aaa");
 
@@ -35,6 +38,7 @@ class FirstCwc extends HTMLElement {
 		`;
 
 		shadow.appendChild(style);
+		shadow.appendChild(title);
 		shadow.appendChild(counter);
         shadow.appendChild(button);
         shadow.appendChild(secondButton);
@@ -94,13 +98,6 @@ document.body.addEventListener(
 	},
 	false
 );
-
-// const innerButton = custom.shadowRoot.querySelector(".ccc");
-// innerButton.onclick = function() {
-//     let innerCount = parseInt(custom.getAttribute('count'), 10);
-//     let newInnerCount = `${innerCount + 1}`;
-//     custom.setAttribute('count', newInnerCount);
-// }
 
 const secondInnerButton = custom.shadowRoot.querySelector(".bbb");
 secondInnerButton.onclick = function() {
